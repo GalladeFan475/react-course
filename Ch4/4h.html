@@ -2,7 +2,27 @@
 <html>
   <head>
     <title>Chatbot</title>
-    <style></style>
+    <style>
+      .body {
+        margin: 0;
+      }
+
+      .buttons {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: rgb(222, 222, 222);
+      }
+
+      .buttons button {
+        color: white;
+        background-color: rgb(25, 135, 84);
+        border: none;
+        padding: 10px 20px;
+      }
+    </style>
   </head>
   <body>
     <div class="js-container"></div>
@@ -36,7 +56,7 @@
         }
 
         return (
-          <div>
+          <div class="buttons">
             <button
               ref={autoClickRef}
               onClick={increaseCount}
