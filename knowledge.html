@@ -162,17 +162,17 @@
       }
 
       function ChatMessages({ chatMessages }) {
-        const chatMessagesRef = React.useRef(null); //JS renders before HTML, must initialise null
+        const chatMessagesRef = React.useRef(null);
 
         React.useEffect(() => {
-          const containerElem = chatMessagesRef.current; //Elem means contain HTML element
-          if (containerElem) {
-            containerElem.scrollTop = containerElem.scrollHeight; //Scroll to bottom when message is created
+          const chatMessagesRefElem = chatMessagesRef.current;
+          if (chatMessagesRefElem) {
+            chatMessagesRefElem.scrollTop = chatMessagesRefElem.scrollHeight;
           }
         }, [chatMessages]);
 
         return (
-          <div className="chat-messages-container" ref={chatMessagesRef}>
+          <div class="chat-messages-ref" ref={chatMessagesRef}>
             {chatMessages.map((chatMessage) => {
               return (
                 <ChatMessage
@@ -211,7 +211,9 @@
         ]);
         return (
           <div className="app-container">
-            <ChatMessages chatMessages={chatMessages} />
+            <div className="chat-messages-container">
+              <ChatMessages chatMessages={chatMessages} />
+            </div>
             <ChatInput
               chatMessages={chatMessages}
               setChatMessages={setChatMessages}
