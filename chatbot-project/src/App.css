@@ -2,12 +2,22 @@
   background-color: rgb(25, 135, 84);
   color: white;
   padding: 12px 20px;
-  margin-left: 10px;
   border: none;
   border-radius: 10px;
   font-size: 15px;
   cursor: pointer;
 }
+
+.clear-button {
+  background-color: rgb(229, 229, 229);
+  color: black;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
 .chat-input {
   padding: 12px 15px;
   border-radius: 10px;
@@ -17,6 +27,7 @@
 }
 .chat-input-container {
   display: flex;
+  gap: 10px;
   margin-bottom: 60px;
 }
 .app-container {
